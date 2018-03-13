@@ -231,7 +231,7 @@ plugin.uploadImage = function (data, callback) {
 		}
 
 		fs.readFile(image.path, function (err, buffer) {
-			uploadToS3(image.name, err, buffer, callback);
+			uploadToS3(image.path, err, buffer, callback);
 		});
 	}
 	else {
