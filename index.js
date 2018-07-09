@@ -153,10 +153,14 @@ function renderAdmin(req, res) {
 	// Regenerate csrf token
 	var token = req.csrfToken();
 
-	var forumPath = nconf.get('url');
+	// get url without protocol
+	var forumPath = nconf.get('url').split("//")[1];
 	if(forumPath.split("").reverse()[0] != "/" ){
 		forumPath = forumPath + "/";
 	}
+	// force https
+	forumPath = "https://" + forumPath;
+	
 	var data = {
 		bucket: settings.bucket,
 		host: settings.host,
