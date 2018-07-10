@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-s3-uploads-updated-quest",
-  "version": "0.3.18",
+  "version": "0.3.19",
   "description": "A plugin for NodeBB to take file uploads and store them on S3, modified for Quest project",
   "main": "index.js",
   "scripts": {
